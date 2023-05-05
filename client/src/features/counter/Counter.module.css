@@ -54,6 +54,10 @@
 }
 
 .asyncButton {
+<<<<<<< HEAD
+=======
+  composes: button;
+>>>>>>> ede59cb98cd74d53e9ee820b15f1ffb32a9286cb
   position: relative;
 }
 

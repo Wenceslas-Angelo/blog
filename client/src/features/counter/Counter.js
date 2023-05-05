@@ -21,7 +21,10 @@ export function Counter() {
     <div>
       <div className={styles.row}>
         <button
+<<<<<<< HEAD
           type="button"
+=======
+>>>>>>> ede59cb98cd74d53e9ee820b15f1ffb32a9286cb
           className={styles.button}
           aria-label="Decrement value"
           onClick={() => dispatch(decrement())}
@@ -30,7 +33,10 @@ export function Counter() {
         </button>
         <span className={styles.value}>{count}</span>
         <button
+<<<<<<< HEAD
           type="button"
+=======
+>>>>>>> ede59cb98cd74d53e9ee820b15f1ffb32a9286cb
           className={styles.button}
           aria-label="Increment value"
           onClick={() => dispatch(increment())}
@@ -46,21 +52,30 @@ export function Counter() {
           onChange={(e) => setIncrementAmount(e.target.value)}
         />
         <button
+<<<<<<< HEAD
           type="button"
+=======
+>>>>>>> ede59cb98cd74d53e9ee820b15f1ffb32a9286cb
           className={styles.button}
           onClick={() => dispatch(incrementByAmount(incrementValue))}
         >
           Add Amount
         </button>
         <button
+<<<<<<< HEAD
           type="button"
+=======
+>>>>>>> ede59cb98cd74d53e9ee820b15f1ffb32a9286cb
           className={styles.asyncButton}
           onClick={() => dispatch(incrementAsync(incrementValue))}
         >
           Add Async
         </button>
         <button
+<<<<<<< HEAD
           type="button"
+=======
+>>>>>>> ede59cb98cd74d53e9ee820b15f1ffb32a9286cb
           className={styles.button}
           onClick={() => dispatch(incrementIfOdd(incrementValue))}
         >

@@ -4,6 +4,9 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import dotEnv from 'dotenv';
 
+// Router
+import PostRouter from './routers/Post.js';
+
 const App = Express();
 dotEnv.config();
 
@@ -18,5 +21,7 @@ mongoose
   })
   .then(() => console.log('MongoDB connexion success...'))
   .catch((error) => console.log(`MongoDB connexion error: ${error}`));
+
+App.use('/post', PostRouter);
 
 export default App;

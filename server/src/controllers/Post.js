@@ -2,10 +2,11 @@ import Post from '../models/Post.js';
 
 const createPost = (req, res) => {
   const post = new Post({
-    title: req.title,
-    content: req.content,
-    author: req.author,
-    category: req.category,
+    title: req.body.title,
+    content: req.body.content,
+    image: req.body.image,
+    author: req.body.author,
+    category: req.body.category,
   });
 
   post
@@ -28,11 +29,12 @@ const getOnePost = (req, res) => {
 
 const updatePost = (req, res) => {
   const post = new Post({
-    _id: req.id,
-    title: req.title,
-    content: req.content,
-    author: req.author,
-    category: req.category,
+    _id: req.body.id,
+    title: req.body.title,
+    content: req.body.content,
+    image: req.body.image,
+    author: req.body.author,
+    category: req.body.category,
   });
 
   Post.updateOne({ _id: req.id }, post)

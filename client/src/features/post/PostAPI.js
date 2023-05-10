@@ -7,13 +7,16 @@ import { POST_URL } from '../../utils/Config';
  * @returns Object
  */
 const createPost = async (postData) => {
-  const response = await axios.post(POST_URL, postData);
+  const config = {
+    headers: {},
+  };
+  const response = await axios.post(POST_URL, postData, config);
   return response.data;
 };
 
 const getPosts = async () => {
   const response = await axios.get(POST_URL);
-  return response.data;
+  return response.data.posts;
 };
 
 /**

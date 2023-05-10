@@ -10,9 +10,7 @@ function Posts() {
 
   useEffect(() => {
     dispatch(getPosts());
-    return () => {
-      dispatch(reset());
-    };
+    return () => dispatch(reset());
   }, [dispatch]);
 
   return (
@@ -22,7 +20,13 @@ function Posts() {
       ) : (
         <div className="p-2 m-auto max-w-5xl grid gap-4 sm:grid-cols-2">
           {posts.map((post) => (
-            <SinglePost key={post.id} />
+            <SinglePost
+              key={post._id}
+              image={post.image}
+              title={post.title}
+              category={post.category}
+              author={post.author}
+            />
           ))}
         </div>
       )}

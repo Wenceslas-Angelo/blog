@@ -1,8 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function Spinner() {
+function Spinner({ height }) {
   return (
-    <div className="flex items-center justify-center h-[100vh]">
+    <div
+      className={`flex items-center justify-center ${
+        height ? `h-${height}` : 'h-[100vh]'
+      }`}
+    >
       <div
         className="inline-block h-32 w-32 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
         role="status"
@@ -14,5 +19,13 @@ function Spinner() {
     </div>
   );
 }
+
+Spinner.defaultProps = {
+  height: null,
+};
+
+Spinner.propTypes = {
+  height: PropTypes.number,
+};
 
 export default Spinner;

@@ -20,6 +20,7 @@
         "peerDependencies": false
       }
     ],
+    "jsx-a11y/label-has-associated-control": "off",
     "operator-linebreak": "off",
     "react/jsx-one-expression-per-line": "off",
     "jsx-a11y/click-events-have-key-events": "off",
@@ -28,6 +29,7 @@
     "object-curly-newline": "off",
     "react/jsx-filename-extension": "off",
     "comma-dangle": "off",
-    "no-param-reassign": "off"
+    "no-param-reassign": "off",
+    "no-underscore-dangle": "off"
   }
 }
